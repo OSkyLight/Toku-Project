@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/img_Cart_ProductImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/lbl_Cart_ProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_Cart_ProductImage"
+        app:layout_constraintTop_toTopOf="@+id/img_Cart_ProductImage" />
+
+    <TextView
+        android:id="@+id/lbl_Cart_ProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/coins"
+        android:text="TextView"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_Cart_ProductName"
+        app:layout_constraintStart_toStartOf="@+id/lbl_Cart_ProductName"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_Cart_ProductName" />
+
+    <ImageButton
+        android:id="@+id/btn_Cart_ProductQuantityMinus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/img_Cart_ProductImage"
+        app:layout_constraintStart_toEndOf="@+id/img_Cart_ProductImage"
+        app:srcCompat="@drawable/minus" />
+
+    <ImageButton
+        android:id="@+id/btn_Cart_ProductQuantityPlus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Cart_ProductQuantityMinus"
+        app:layout_constraintStart_toEndOf="@+id/lbl_Cart_ProductQuantity"
+        app:layout_constraintTop_toTopOf="@+id/btn_Cart_ProductQuantityMinus"
+        app:srcCompat="@drawable/add" />
+
+    <TextView
+        android:id="@+id/lbl_Cart_ProductQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Cart_ProductQuantityMinus"
+        app:layout_constraintStart_toEndOf="@+id/btn_Cart_ProductQuantityMinus"
+        app:layout_constraintTop_toTopOf="@+id/btn_Cart_ProductQuantityMinus" />
+
+    <Button
+        android:id="@+id/btn_Cart_ProdcutRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_border"
+        android:text="Remove"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_Cart_ProductQuantity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lbl_Cart_ProductQuantity"
+        app:layout_constraintVertical_bias="0.538" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

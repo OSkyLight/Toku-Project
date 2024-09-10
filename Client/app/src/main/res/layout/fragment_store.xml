@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SettingFragment">
+
+    <ImageView
+        android:id="@+id/img_StoreUserAvatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/lbl_StoreUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/img_StoreUserAvatar"
+        app:layout_constraintStart_toStartOf="@+id/img_StoreUserAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/img_StoreUserAvatar" />
+
+    <Button
+        android:id="@+id/btn_StoreCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_border"
+        android:drawableLeft="@drawable/icon_store"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Cart"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_StoreUserName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_StoreUserAvatar" />
+
+    <TextView
+        android:id="@+id/lbl_StoreUserCoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:drawableLeft="@drawable/coins"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_StoreUserName"
+        app:layout_constraintEnd_toStartOf="@+id/btn_StoreCheckout"
+        app:layout_constraintStart_toEndOf="@+id/img_StoreUserAvatar"
+        app:layout_constraintTop_toTopOf="@+id/img_StoreUserAvatar" />
+
+    <ProgressBar
+        android:id="@+id/loadingBar_Store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listView_Store"
+        android:layout_width="409dp"
+        android:layout_height="531dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_StoreUserName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

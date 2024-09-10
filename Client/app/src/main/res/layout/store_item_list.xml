@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageView
+        android:id="@+id/img_Store_ProductBox"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/lbl_Store_ProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_Store_ProductBox"
+        app:layout_constraintTop_toTopOf="@+id/img_Store_ProductBox" />
+
+    <TextView
+        android:id="@+id/lbl_Store_ProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/price_icon"
+        android:text="TextView"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Store_AddToCart"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_Store_ProductName"
+        app:layout_constraintStart_toStartOf="@+id/lbl_Store_ProductName"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_Store_ProductName" />
+
+    <Button
+        android:id="@+id/btn_Store_AddToCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add To Cart"
+        android:background="@android:color/holo_green_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/img_Store_ProductBox"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_Store_ProductName"
+        app:layout_constraintStart_toStartOf="@+id/lbl_Store_ProductName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

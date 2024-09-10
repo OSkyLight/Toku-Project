@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.PostActivity">
+
+    <TextView
+        android:id="@+id/lbl_Post_Content"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_ClickedUserAvatar" />
+    <TextView
+        android:id="@+id/lbl_Post_LikeCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/heart_icon"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/lbl_Post_Content"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_Post_Content" />
+    <TextView
+        android:id="@+id/lbl_Post_CommentCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableRight="@drawable/comment_icon"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_Post_Content"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_Post_Content" />
+    <Button
+        android:id="@+id/btn_Post_Like"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/btn_like_icon_24"
+        android:text="Like"
+        android:textColor="@color/black"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/lbl_Post_LikeCount"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_Post_LikeCount" />
+    <Button
+        android:id="@+id/btn_Post_Comment"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/btn_comment"
+        android:text="Comment"
+        android:textColor="@color/black"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_Post_CommentCount"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_Post_CommentCount" />
+
+    <ImageView
+        android:id="@+id/btn_PostView_Back"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+    <ImageView
+        android:id="@+id/img_ClickedUserAvatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="140dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_PostView_Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_PostView_Back"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/lbl_ClickedUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/img_ClickedUserAvatar"
+        app:layout_constraintStart_toEndOf="@+id/img_ClickedUserAvatar"
+        app:layout_constraintTop_toTopOf="@+id/img_ClickedUserAvatar" />
+
+
+    <EditText
+        android:id="@+id/txt_Comment"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:hint="Write a comment.."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_CreateComment"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_CreateComment"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <Button
+        android:id="@+id/btn_CreateComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="Comment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ListView
+        android:id="@+id/listView_Comment"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_CreateComment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Post_Like" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
